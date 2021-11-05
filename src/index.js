@@ -1,6 +1,12 @@
 const multiplyByTwo = (a) => a * 2;
 const addTen = (a) => a + 10;
 
+const addTwoAfterAWhile = (a) => new Promise((resolve) => {
+  setTimeout(() => {
+    resolve(a + 2);
+  }, 5000);
+});
+
 const myNum = 10;
 
 const trace = (val) => {
@@ -10,10 +16,15 @@ const trace = (val) => {
 
 const { log } = console;
 
-multiplyByTwo(myNum)
- |> addTen(%)
- |> trace(%)
- |> addTen(%)
- |> trace(%)
- |> multiplyByTwo(%)
- |> log(%);
+(async () => {
+  multiplyByTwo(myNum)
+    |> trace(%)
+    |> addTen(%)
+    |> trace(%)
+    |> await addTwoAfterAWhile(%)
+    |> trace(%)
+    |> addTen(%)
+    |> trace(%)
+    |> multiplyByTwo(%)
+    |> log(%);
+})();
