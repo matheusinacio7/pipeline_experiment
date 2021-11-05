@@ -1,0 +1,26 @@
+{
+  "parser": "@babel/eslint-parser/experimental-worker",
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base"
+  ],
+  "ignorePatterns": ["node_modules", "__coverage__", "dist"],
+  "rules": {
+    "no-plusplus": "off",
+    "consistent-return": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "max-len": [
+        "error",
+        {
+            "code": 110,
+            "ignoreComments": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true
+        }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "no-console": "off",
+    "prefer-rest-params": "off"
+  }
+}
