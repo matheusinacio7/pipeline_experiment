@@ -1,9 +1,19 @@
 const multiplyByTwo = (a) => a * 2;
 const addTen = (a) => a + 10;
 
-const result = multiplyByTwo(myNum)
- |> addTen(%)
- |> addTen(%)
- |> multiplyByTwo(%);
+const myNum = 10;
 
-console.log(result);
+const trace = (val) => {
+  console.log(val);
+  return val;
+};
+
+const { log } = console;
+
+multiplyByTwo(myNum)
+ |> addTen(%)
+ |> trace(%)
+ |> addTen(%)
+ |> trace(%)
+ |> multiplyByTwo(%)
+ |> log(%);

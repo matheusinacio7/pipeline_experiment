@@ -21,6 +21,7 @@
         }],
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
     "no-console": "off",
+    "no-unused-expressions": "off",
     "prefer-rest-params": "off"
   }
 }
